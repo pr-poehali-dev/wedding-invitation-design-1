@@ -65,9 +65,16 @@ export default function WeddingInvitation() {
         </div>
       </section>
 
-      {/* Welcome Message */}
+      {/* Photo Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-12" data-animate="scale">
+            <img 
+              src="/img/5bcce0a7-a3e4-4e4e-b29b-5c533b2385fd.jpg" 
+              alt="Игорь и Валерия" 
+              className="mx-auto rounded-lg shadow-xl max-w-md w-full h-auto card-hover"
+            />
+          </div>
           <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-autumn-brown mb-8" data-animate>
             Дорогие друзья!
           </h2>
