@@ -10,9 +10,8 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 export default function WeddingInvitation() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     attending: '',
-    guests: '',
+    alcohol: '',
     message: ''
   });
 
@@ -44,8 +43,8 @@ export default function WeddingInvitation() {
           <h1 className="font-cormorant text-6xl md:text-8xl font-bold text-autumn-brown mb-6" data-animate>
             Игорь & Валерия
           </h1>
-          <p className="text-2xl md:text-3xl font-cormorant text-autumn-slate mb-4" data-animate>
-            Приглашают на свою свадьбу
+          <p className="text-3xl md:text-4xl font-cormorant font-bold text-autumn-orange mb-4" data-animate>
+            ПРИГЛАШАЮТ НА СВОЮ СВАДЬБУ
           </p>
           <div className="flex items-center justify-center gap-6 mb-8 text-lg font-cormorant text-autumn-orange" data-animate>
             <div className="flex items-center gap-2">
@@ -76,7 +75,7 @@ export default function WeddingInvitation() {
             />
           </div>
           <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-autumn-brown mb-8" data-animate>
-            Дорогие друзья!
+            Дорогие<br />родные и друзья!
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto" data-animate>
             Мы с радостью приглашаем вас разделить с нами один из самых важных дней в нашей жизни! 
@@ -161,7 +160,12 @@ export default function WeddingInvitation() {
           <div className="bg-card p-8 rounded-lg border border-autumn-gold/30 card-hover" data-animate="scale">
             <Icon name="Shirt" size={32} className="text-autumn-orange mx-auto mb-6" />
             <p className="text-lg text-muted-foreground mb-8">
-              Просим вас выбрать наряды в осенней цветовой гамме.
+              Нам будет очень приятно,<br />
+              если Вы поддержите цветовую<br />
+              гамму торжества и выберете<br />
+              наряды в соответствии<br />
+              с цветовой палитрой<br />
+              нашей свадьбы
             </p>
             
             {/* Color Palette */}
@@ -199,7 +203,9 @@ export default function WeddingInvitation() {
       <section className="py-16 px-4 bg-card">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-cormorant text-4xl font-bold text-center text-autumn-brown mb-8" data-animate>
-            Подтверждение присутствия
+            Подтвердите, пожалуйста,<br />
+            своё присутствие<br />
+            на нашем торжестве!
           </h2>
           <Card className="border-autumn-gold/30 card-hover" data-animate="scale">
             <CardContent className="p-6">
@@ -217,18 +223,7 @@ export default function WeddingInvitation() {
                   />
                 </div>
 
-                <div>
-                  <Label htmlFor="email" className="text-autumn-brown font-semibold">
-                    Email
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="mt-2"
-                  />
-                </div>
+
 
                 <div>
                   <Label className="text-autumn-brown font-semibold">
@@ -261,18 +256,41 @@ export default function WeddingInvitation() {
                 </div>
 
                 <div>
-                  <Label htmlFor="guests" className="text-autumn-brown font-semibold">
-                    Количество гостей (включая вас)
+                  <Label className="text-autumn-brown font-semibold">
+                    Мы хотим, чтобы свадьба прошла весело, поэтому просим Вас выбрать алкоголь, который Вы предпочитаете
                   </Label>
-                  <Input
-                    id="guests"
-                    type="number"
-                    min="1"
-                    max="4"
-                    value={formData.guests}
-                    onChange={(e) => handleInputChange('guests', e.target.value)}
-                    className="mt-2"
-                  />
+                  <div className="mt-2 space-y-2">
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="alcohol"
+                        value="champagne"
+                        onChange={(e) => handleInputChange('alcohol', e.target.value)}
+                        className="mr-2"
+                      />
+                      <span>Шампанское</span>
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="alcohol"
+                        value="wine"
+                        onChange={(e) => handleInputChange('alcohol', e.target.value)}
+                        className="mr-2"
+                      />
+                      <span>Вино</span>
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="alcohol"
+                        value="vodka"
+                        onChange={(e) => handleInputChange('alcohol', e.target.value)}
+                        className="mr-2"
+                      />
+                      <span>Водка</span>
+                    </label>
+                  </div>
                 </div>
 
                 <div>
