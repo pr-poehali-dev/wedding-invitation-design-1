@@ -39,14 +39,14 @@ export default function WeddingInvitation() {
             <Icon name="Leaf" size={48} className="text-autumn-orange mx-auto mb-4" />
           </div>
           <h1 className="font-cormorant text-6xl md:text-8xl font-bold text-autumn-brown mb-6">
-            Анна & Дмитрий
+            Игорь & Валерия
           </h1>
           <p className="text-2xl md:text-3xl font-cormorant text-autumn-slate mb-8">
             Приглашают на свою свадьбу
           </p>
           <div className="flex items-center justify-center gap-4 text-autumn-orange">
             <Icon name="Calendar" size={24} />
-            <span className="text-xl font-sans">15 октября 2024</span>
+            <span className="text-xl font-sans">1 ноября 2025</span>
           </div>
         </div>
       </section>
@@ -88,10 +88,10 @@ export default function WeddingInvitation() {
                 </div>
                 <div className="flex items-center justify-center gap-2 text-muted-foreground">
                   <Icon name="MapPin" size={18} />
-                  <span>Деревенская церковь Святого Николая</span>
+                  <span>ЗАГС Верещагинского района</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-4">
-                  с. Васильевское, ул. Центральная, 12
+                  п. Зюкайка, ул. Пугачёва, д. 42/12
                 </p>
               </CardContent>
             </Card>
@@ -111,10 +111,10 @@ export default function WeddingInvitation() {
                 </div>
                 <div className="flex items-center justify-center gap-2 text-muted-foreground">
                   <Icon name="MapPin" size={18} />
-                  <span>Ресторан "Деревенская усадьба"</span>
+                  <span>Банкетный зал "Зюкайка"</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-4">
-                  с. Васильевское, ул. Парковая, 5
+                  п. Зюкайка, ул. Пугачёва, д. 42/12
                 </p>
               </CardContent>
             </Card>
@@ -252,7 +252,7 @@ export default function WeddingInvitation() {
             С любовью и нетерпением ждём встречи,
           </p>
           <p className="font-cormorant text-xl text-autumn-brown">
-            Анна и Дмитрий
+            Игорь и Валерия
           </p>
           <div className="mt-6 flex justify-center gap-4 text-sm text-muted-foreground">
             <span>По вопросам: +7 (999) 123-45-67</span>
