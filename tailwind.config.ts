@@ -18,7 +18,18 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'cormorant': ['Cormorant', 'serif'],
+				'sans': ['Open Sans', 'sans-serif'],
+			},
 			colors: {
+				autumn: {
+					orange: '#D2691E',
+					brown: '#8B4513', 
+					gold: '#DAA520',
+					cream: '#F5F5DC',
+					slate: '#2F4F4F'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
