@@ -87,8 +87,39 @@ export default function WeddingInvitation() {
         </div>
       </section>
 
-      {/* Event Details */}
+      {/* Childhood Photos Gallery */}
       <section className="py-16 px-4 bg-card">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-center text-autumn-brown mb-12" data-animate>
+            Мы выросли и встретились!
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {/* Bride's childhood photos */}
+            <div className="text-center" data-animate="fade-left">
+              <h3 className="font-cormorant text-2xl font-bold text-autumn-brown mb-6">Валерия</h3>
+              <img 
+                src="https://cdn.poehali.dev/files/6f80dd29-e170-4293-bd82-61cf7e97adc0.jpg" 
+                alt="Детские фото Валерии" 
+                className="rounded-lg shadow-xl w-full h-auto card-hover"
+              />
+            </div>
+            
+            {/* Groom's childhood photos */}
+            <div className="text-center" data-animate="fade-right">
+              <h3 className="font-cormorant text-2xl font-bold text-autumn-brown mb-6">Игорь</h3>
+              <img 
+                src="https://cdn.poehali.dev/files/2f63e008-5ff8-419d-89e7-4b8d0ac5abc3.jpg" 
+                alt="Детские фото Игоря" 
+                className="rounded-lg shadow-xl w-full h-auto card-hover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Event Details */}
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-center text-autumn-brown mb-12" data-animate>
             Детали торжества
