@@ -159,12 +159,54 @@ export default function WeddingInvitation() {
             Дресс-код
           </h2>
           <div className="bg-card p-8 rounded-lg border border-autumn-gold/30 card-hover" data-animate="scale">
-            <Icon name="Shirt" size={32} className="text-autumn-orange mx-auto mb-4" />
-            <p className="text-lg text-muted-foreground">
-              Просим вас выбрать наряды в осенней цветовой гамме: 
-              <span className="font-semibold text-autumn-brown"> терракотовый, золотистый, коричневый, кремовый</span>.
+            <Icon name="Shirt" size={32} className="text-autumn-orange mx-auto mb-6" />
+            <p className="text-lg text-muted-foreground mb-8">
+              Просим вас выбрать наряды в осенней цветовой гамме.
               Приветствуется деревенский стиль — натуральные ткани и уютные фасоны.
             </p>
+            
+            {/* Color Palette */}
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <div className="flex flex-col items-center">
+                <div 
+                  className="w-16 h-16 rounded-full shadow-lg card-hover"
+                  style={{ backgroundColor: '#8B4513' }}
+                />
+                <span className="text-sm text-muted-foreground mt-2">Коричневый</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img 
+                  src="https://cdn.poehali.dev/files/04be2fb7-b1c8-43ad-8f92-47ae2bf6d3a4.jpg"
+                  alt="Коричневый"
+                  className="w-16 h-16 rounded-full shadow-lg card-hover object-cover"
+                />
+                <span className="text-sm text-muted-foreground mt-2">Коричневый</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img 
+                  src="https://cdn.poehali.dev/files/82ec8273-e795-4aaf-a874-cfb89986086c.jpg"
+                  alt="Терракотовый"
+                  className="w-16 h-16 rounded-full shadow-lg card-hover object-cover"
+                />
+                <span className="text-sm text-muted-foreground mt-2">Терракотовый</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img 
+                  src="https://cdn.poehali.dev/files/6372025f-6f0e-454a-9d99-cc64a2f4dce3.jpg"
+                  alt="Золотистый"
+                  className="w-16 h-16 rounded-full shadow-lg card-hover object-cover"
+                />
+                <span className="text-sm text-muted-foreground mt-2">Золотистый</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img 
+                  src="https://cdn.poehali.dev/files/4b32d3ac-a985-4bc3-94a1-b3585396a27c.jpg"
+                  alt="Бежевый"
+                  className="w-16 h-16 rounded-full shadow-lg card-hover object-cover"
+                />
+                <span className="text-sm text-muted-foreground mt-2">Бежевый</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
