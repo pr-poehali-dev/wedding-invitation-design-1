@@ -362,6 +362,10 @@ export default function WeddingInvitation() {
           </p>
           <div className="mt-6 flex justify-center gap-4 text-sm text-muted-foreground" data-animate>
             <span>По вопросам: +7 (999) 123-45-67</span>
+            <span>•</span>
+            <a href="/admin" className="text-autumn-orange hover:underline">
+              Панель администратора
+            </a>
           </div>
         </div>
       </footer>

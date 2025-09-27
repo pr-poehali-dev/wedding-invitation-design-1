@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "name": "Test get all wedding responses",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "responses": "array",
+        "statistics": "object"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test filter by attending status",
+      "method": "GET", 
+      "path": "/?attending=yes",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "responses": "array",
+        "statistics": "object"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
