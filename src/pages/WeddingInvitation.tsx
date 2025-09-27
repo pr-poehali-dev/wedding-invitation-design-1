@@ -17,11 +17,42 @@ export default function WeddingInvitation() {
 
   useScrollAnimation();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('RSVP submitted:', formData);
-    // Here you would typically send the data to a backend
-    alert('Спасибо за подтверждение! Мы получили ваш ответ.');
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/4df592cd-eb65-4e42-a699-c51842f4880f', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        alert('Спасибо за ваш ответ! Мы с нетерпением ждем встречи с вами на нашем торжестве! 💕');
+        
+        // Reset form
+        setFormData({
+          name: '',
+          attending: '',
+          alcohol: '',
+          message: ''
+        });
+      } else {
+        alert(`Ошибка: ${result.error || 'Не удалось отправить ответ'}`);
+      }
+    } catch (error) {
+      alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -308,9 +339,10 @@ export default function WeddingInvitation() {
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-autumn-orange hover:bg-autumn-orange/90 text-white font-semibold py-3 button-hover"
+                  disabled={isSubmitting}
+                  className="w-full bg-autumn-orange hover:bg-autumn-orange/90 text-white font-semibold py-3 button-hover disabled:opacity-50"
                 >
-                  Отправить подтверждение
+                  {isSubmitting ? 'Отправляем...' : 'Отправить подтверждение'}
                 </Button>
               </form>
             </CardContent>

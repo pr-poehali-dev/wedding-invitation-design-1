@@ -1,0 +1,42 @@
+{
+  "tests": [
+    {
+      "name": "Test successful wedding response submission",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Петров",
+        "attending": "yes",
+        "alcohol": "champagne",
+        "message": "С нетерпением ждем вашего торжества!"
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "success": true,
+        "message": "string",
+        "id": "number"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test validation error - missing name",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "attending": "yes",
+        "alcohol": "wine"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
