@@ -44,9 +44,20 @@ export default function WeddingInvitation() {
           <h1 className="font-cormorant text-6xl md:text-8xl font-bold text-autumn-brown mb-6" data-animate>
             Игорь & Валерия
           </h1>
-          <p className="text-2xl md:text-3xl font-cormorant text-autumn-slate mb-8" data-animate>
+          <p className="text-2xl md:text-3xl font-cormorant text-autumn-slate mb-4" data-animate>
             Приглашают на свою свадьбу
           </p>
+          <div className="flex items-center justify-center gap-6 mb-8 text-lg font-cormorant text-autumn-orange" data-animate>
+            <div className="flex items-center gap-2">
+              <Icon name="Cake" size={20} />
+              <span>День рождения Игоря</span>
+            </div>
+            <div className="text-autumn-brown">•</div>
+            <div className="flex items-center gap-2">
+              <Icon name="Cake" size={20} />
+              <span>День рождения Валерии</span>
+            </div>
+          </div>
           <div className="flex items-center justify-center gap-4 text-autumn-orange" data-animate="scale">
             <Icon name="Calendar" size={24} />
             <span className="text-xl font-sans">1 ноября 2025</span>
@@ -61,8 +72,9 @@ export default function WeddingInvitation() {
             Дорогие друзья!
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto" data-animate>
-            Мы с радостью приглашаем вас разделить с нами один из самых важных дней в нашей жизни. 
-            Ваше присутствие сделает наш праздник по-настоящему особенным и незабываемым.
+            Мы с радостью приглашаем вас разделить с нами один из самых важных дней в нашей жизни! 
+            В один день у нас сразу три повода для празднования - наша свадьба и дни рождения.
+            Ваше присутствие сделает наш тройной праздник по-настоящему особенным и незабываемым.
             Давайте вместе отпразднуем любовь в уютной деревенской атмосфере!
           </p>
         </div>
@@ -75,46 +87,23 @@ export default function WeddingInvitation() {
             Детали торжества
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Ceremony */}
-            <Card className="border-autumn-gold/30 card-hover" data-animate="fade-left">
-              <CardHeader className="text-center pb-4">
-                <Icon name="Church" size={32} className="text-autumn-orange mx-auto mb-2" />
-                <h3 className="font-cormorant text-2xl font-bold text-autumn-brown">
-                  Церемония
-                </h3>
-              </CardHeader>
-              <CardContent className="text-center space-y-3">
-                <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                  <Icon name="Clock" size={18} />
-                  <span>14:00</span>
-                </div>
-                <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                  <Icon name="MapPin" size={18} />
-                  <span>ЗАГС Верещагинского района</span>
-                </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  п. Зюкайка, ул. Пугачёва, д. 42/12
-                </p>
-              </CardContent>
-            </Card>
-
+          <div className="max-w-2xl mx-auto">
             {/* Reception */}
-            <Card className="border-autumn-gold/30 card-hover" data-animate="fade-right">
+            <Card className="border-autumn-gold/30 card-hover" data-animate="scale">
               <CardHeader className="text-center pb-4">
                 <Icon name="PartyPopper" size={32} className="text-autumn-orange mx-auto mb-2" />
                 <h3 className="font-cormorant text-2xl font-bold text-autumn-brown">
-                  Банкет
+                  Торжество
                 </h3>
               </CardHeader>
               <CardContent className="text-center space-y-3">
                 <div className="flex items-center justify-center gap-2 text-muted-foreground">
                   <Icon name="Clock" size={18} />
-                  <span>16:00</span>
+                  <span>17:00 - 23:00</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-muted-foreground">
                   <Icon name="MapPin" size={18} />
-                  <span>Банкетный зал "Зюкайка"</span>
+                  <span>Кафе "Алмаз"</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-4">
                   п. Зюкайка, ул. Пугачёва, д. 42/12
