@@ -162,7 +162,6 @@ export default function WeddingInvitation() {
             <Icon name="Shirt" size={32} className="text-autumn-orange mx-auto mb-6" />
             <p className="text-lg text-muted-foreground mb-8">
               Просим вас выбрать наряды в осенней цветовой гамме.
-              Приветствуется деревенский стиль — натуральные ткани и уютные фасоны.
             </p>
             
             {/* Color Palette */}
