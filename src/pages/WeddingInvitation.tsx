@@ -4,7 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 export default function WeddingInvitation() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ export default function WeddingInvitation() {
     guests: '',
     message: ''
   });
+
+  useScrollAnimation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,16 +38,16 @@ export default function WeddingInvitation() {
           style={{ backgroundImage: 'url(/img/f74274fd-00bf-4022-9087-c9fc942f0844.jpg)' }}
         />
         <div className="relative text-center px-4 max-w-4xl">
-          <div className="mb-8">
-            <Icon name="Leaf" size={48} className="text-autumn-orange mx-auto mb-4" />
+          <div className="mb-8" data-animate="scale">
+            <Icon name="Leaf" size={48} className="text-autumn-orange mx-auto mb-4 animate-float" />
           </div>
-          <h1 className="font-cormorant text-6xl md:text-8xl font-bold text-autumn-brown mb-6">
+          <h1 className="font-cormorant text-6xl md:text-8xl font-bold text-autumn-brown mb-6" data-animate>
             Игорь & Валерия
           </h1>
-          <p className="text-2xl md:text-3xl font-cormorant text-autumn-slate mb-8">
+          <p className="text-2xl md:text-3xl font-cormorant text-autumn-slate mb-8" data-animate>
             Приглашают на свою свадьбу
           </p>
-          <div className="flex items-center justify-center gap-4 text-autumn-orange">
+          <div className="flex items-center justify-center gap-4 text-autumn-orange" data-animate="scale">
             <Icon name="Calendar" size={24} />
             <span className="text-xl font-sans">1 ноября 2025</span>
           </div>
@@ -54,10 +57,10 @@ export default function WeddingInvitation() {
       {/* Welcome Message */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-autumn-brown mb-8">
+          <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-autumn-brown mb-8" data-animate>
             Дорогие друзья!
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto" data-animate>
             Мы с радостью приглашаем вас разделить с нами один из самых важных дней в нашей жизни. 
             Ваше присутствие сделает наш праздник по-настоящему особенным и незабываемым.
             Давайте вместе отпразднуем любовь в уютной деревенской атмосфере!
@@ -68,13 +71,13 @@ export default function WeddingInvitation() {
       {/* Event Details */}
       <section className="py-16 px-4 bg-card">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-center text-autumn-brown mb-12">
+          <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-center text-autumn-brown mb-12" data-animate>
             Детали торжества
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Ceremony */}
-            <Card className="border-autumn-gold/30">
+            <Card className="border-autumn-gold/30 card-hover" data-animate="fade-left">
               <CardHeader className="text-center pb-4">
                 <Icon name="Church" size={32} className="text-autumn-orange mx-auto mb-2" />
                 <h3 className="font-cormorant text-2xl font-bold text-autumn-brown">
@@ -97,7 +100,7 @@ export default function WeddingInvitation() {
             </Card>
 
             {/* Reception */}
-            <Card className="border-autumn-gold/30">
+            <Card className="border-autumn-gold/30 card-hover" data-animate="fade-right">
               <CardHeader className="text-center pb-4">
                 <Icon name="PartyPopper" size={32} className="text-autumn-orange mx-auto mb-2" />
                 <h3 className="font-cormorant text-2xl font-bold text-autumn-brown">
@@ -125,10 +128,10 @@ export default function WeddingInvitation() {
       {/* Dress Code */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-cormorant text-4xl font-bold text-autumn-brown mb-8">
+          <h2 className="font-cormorant text-4xl font-bold text-autumn-brown mb-8" data-animate>
             Дресс-код
           </h2>
-          <div className="bg-card p-8 rounded-lg border border-autumn-gold/30">
+          <div className="bg-card p-8 rounded-lg border border-autumn-gold/30 card-hover" data-animate="scale">
             <Icon name="Shirt" size={32} className="text-autumn-orange mx-auto mb-4" />
             <p className="text-lg text-muted-foreground">
               Просим вас выбрать наряды в осенней цветовой гамме: 
@@ -142,10 +145,10 @@ export default function WeddingInvitation() {
       {/* RSVP Form */}
       <section className="py-16 px-4 bg-card">
         <div className="max-w-2xl mx-auto">
-          <h2 className="font-cormorant text-4xl font-bold text-center text-autumn-brown mb-8">
+          <h2 className="font-cormorant text-4xl font-bold text-center text-autumn-brown mb-8" data-animate>
             Подтверждение присутствия
           </h2>
-          <Card className="border-autumn-gold/30">
+          <Card className="border-autumn-gold/30 card-hover" data-animate="scale">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -234,7 +237,7 @@ export default function WeddingInvitation() {
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-autumn-orange hover:bg-autumn-orange/90 text-white font-semibold py-3"
+                  className="w-full bg-autumn-orange hover:bg-autumn-orange/90 text-white font-semibold py-3 button-hover"
                 >
                   Отправить подтверждение
                 </Button>
@@ -247,14 +250,14 @@ export default function WeddingInvitation() {
       {/* Footer */}
       <footer className="py-12 px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <Icon name="Heart" size={24} className="text-autumn-orange mx-auto mb-4" />
-          <p className="text-muted-foreground mb-2">
+          <Icon name="Heart" size={24} className="text-autumn-orange mx-auto mb-4 animate-float" data-animate="scale" />
+          <p className="text-muted-foreground mb-2" data-animate>
             С любовью и нетерпением ждём встречи,
           </p>
-          <p className="font-cormorant text-xl text-autumn-brown">
+          <p className="font-cormorant text-xl text-autumn-brown" data-animate>
             Игорь и Валерия
           </p>
-          <div className="mt-6 flex justify-center gap-4 text-sm text-muted-foreground">
+          <div className="mt-6 flex justify-center gap-4 text-sm text-muted-foreground" data-animate>
             <span>По вопросам: +7 (999) 123-45-67</span>
           </div>
         </div>
